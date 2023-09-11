@@ -1,0 +1,618 @@
+<?php
+include "config.php";
+
+if(isset($_POST['Submit'])){
+    $name=$_POST['name'];
+    $email=$_POST['email'];
+    $phone=$_POST['pno'];
+    $message=$_POST['message'];
+
+    $sql="INSERT INTO `sathi`(`name`, `email`, `pno`, `message`) VALUES ('$name','$email','$phone','$message')";
+
+    $result=$conn->query($sql);
+
+    if($result){
+        // echo "Insert Successfully";
+
+        
+    }
+    else{
+        die(mysqli_error($conn));
+    }
+    
+
+}
+
+
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with Creative Studio landing page.">
+    <meta name="author" content="Devcrud">
+    <title>Sathi Events</title>
+
+    <!-- font icons -->
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+
+    <!-- Bootstrap + Creative Studio main styles -->
+	<link rel="stylesheet" href="assets/css/creative-studio.css">
+
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+    
+    <!-- Page Navigation -->
+    <nav class="navbar custom-navbar navbar-expand-lg navbar-dark" data-spy="affix" data-offset-top="20">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="assets/imgs/logo.png" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#service">Service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#team">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonial">Testimonial</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary btn-sm ml-lg-3" href="file:///C:/Users/lenovo/Desktop/Event/login/index.html">login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End Of Page Navigation -->
+
+    <!-- Page Header -->
+    <header class="header">
+        <div class="overlay">
+            <h6 class="subtitle">Small Team With Big Ideas</h6>
+            <h1 class="title">Sathi Events</h1>
+            <div class="buttons text-center">
+                <a href="#service" class="btn btn-primary rounded w-lg btn-lg my-1">Our Service</a>
+                <a href="#contact" class="btn btn-outline-light rounded w-lg btn-lg my-1">Contact Us</a>
+            </div>              
+        </div>      
+    </header>
+    <!-- End Of Page Header -->
+
+    <!-- Box -->
+    <div class="box text-center">
+        <div class="box-item">
+            <i class="ti-ruler-pencil"></i>
+            <h6 class="box-title">Stall Fabrications</h6>
+            <p>Connectbase communications is a top notched Advertising agency from Ahmedabad which deals in Exhibition stall designing ,Exhibition stall fabrication and in digital marketing. We have served more than 650+ customers in 12 years.</p>
+        </div>
+        <div class="box-item">
+            <i class="ti-announcement"></i>
+            <h6 class="box-title">Promotions</h6>
+            <p>There are thousand and one ways to promote products and services but it is difficult to find the way of promotions which fits our offering and target audience. We offer News paper advertisement, Banner ad, Autorickshaw ad ,Radio advertisement etc.</p>
+        </div>
+        <div class="box-item">
+            <i class="ti-stats-up"></i>
+            <h6 class="box-title">Branding</h6>
+            <p>We at connectbase conduct numerous exercise to make your product or service brand which can pay you an equity to the years to come. we conduct deep research about the company taking into consideration lot many factors 
+            .</p>
+        </div>
+    </div>
+    <!-- End of Box -->
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-5 col-lg-4">
+                    <img src="assets/imgs/stall.jpg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, Creative studio Landing page" class="w-100 img-thumbnail mb-3">
+                </div>
+                <div class="col-md-7 col-lg-8">
+                    <h6 class="section-subtitle mb-0">We Create</h6>
+                    <h6 class="section-title mb-3">Stall Fabrications</h6>
+                    <p>We prepare different types of exhibition stall and booth design. We proceed for fabrication of booth or stand design after doing proper planning and paper work. We dole out our team to different task of exhibition fabrication and endeavor to accomplish the flawlessness in all portion of exhibition stall fabrication. We take the input from our customer the best possible way and keep in to consideration the minute things the customer would like to get into the stall .We follow customer centric approach and make all the efforts to make him joyful about for which he has paid.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of About Section -->
+
+    <!-- About Section with bg -->
+    <section class="has-bg-img py-md">
+        <div class="container text-center">
+            <h6 class="section-subtitle">We See</h6>
+            <h6 class="section-title mb-6">What Other Don't See.</h6>
+            <div class="widget mb-4">
+                <div class="widget-item">
+                    <i class="ti-notepad"></i>
+                    <h4>Planning</h4>
+                </div>
+                <div class="widget-item">
+                    <i class="ti-layout"></i>
+                    <h4>Mockup</h4>
+                </div>
+                <div class="widget-item">
+                    <i class="ti-filter"></i>
+                    <h4>Develope</h4>
+                </div>
+                <div class="widget-item">
+                    <i class="ti-thumb-up"></i>
+                    <h4>Provide</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Of About Sectoin -->
+
+    <!-- Service Section -->
+    <section id="service">
+        <div class="container">
+            <h6 class="section-subtitle text-center">Makes Happen</h6>
+            <h5 class="section-title text-center mb-6">Our Service</h5> 
+            <div class="row">
+                <div class="col-sm-4 col-md-3">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h2 class="mb-4"><i class="ti-crown text-primary"></i></h2>
+                            <h6 class="card-title">High-quality craftsmanship</h6>
+                            <p>Our team of skilled professionals are dedicated to providing high-quality craftsmanship that meets or exceeds industry standards.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-3">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h2 class="mb-4"><i class="ti-paint-roller text-primary"></i></h2>
+                            <h6 class="card-title">Customised designs</h6>
+                            <p> We offer customised exhibition stand designs tailored to the specific needs and requirements of each client.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-3">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h2 class="mb-4"><i class="ti-clipboard text-primary"></i></h2>
+                            <h6 class="card-title">Project management</h6>
+                            <p>We provide end-to-end project management services, ensuring that each project is completed on time and within budget.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-3">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h2 class="mb-4"><i class="ti-user text-primary"></i></h2>
+                            <h6 class="card-title">Excellent customer service</h6>
+                            <p>We are committed to providing excellent customer service throughout the entire process, from initial consultation to final delivery.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-3">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h2 class="mb-4"><i class="ti-thumb-up text-primary"></i></h2>
+                            <h6 class="card-title">Extensive experience</h6>
+                            <p>We have extensive experience in designing, building, and managing exhibition stands for a wide range of industries and events.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-3">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h2 class="mb-4"><i class="ti-money text-primary"></i></h2>
+                            <h6 class="card-title">Competitive pricing</h6>
+                            <p>We offer competitive pricing for its exhibition stand design, build, and contracting services, making it an attractive option for clients on a budget.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-3">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h2 class="mb-4"><i class="ti-layout-width-default text-primary"></i></h2>
+                            <h6 class="card-title">Event Organisers</h6>
+                            <p>sathi is renowned for organizing some of the best events.We pride ourselves on our attention to detail,creativity,and flawless execution.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-3">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h2 class="mb-4"><i class="ti-angle-double-up text-primary"></i></h2>
+                            <h6 class="card-title">Faster TAT</h6>
+                            <p>for last minute decision makers as Installation & Turn Around Time is lesser than customized stands and that too without any compromise on finish and quality.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>  
+        </div>
+    </section>
+    <!-- End of Service Section -->
+
+    <!-- Portfolio section -->
+    <section id="portfolio">
+        <div class="container text-center">
+            <h6 class="section-subtitle">Our Awesome Works</h6>
+            <h6 class="section-title mb-5">Our Portfolio</h6>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="img-wrapper">
+                        <img src="assets/imgs/roku.jpg" alt="roku gin">
+                        <div class="overlay">
+                            <div class="overlay-infos">
+                                <h5>Roku Gin</h5>
+                            </div>  
+                        </div>
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="assets/imgs/tops.jpg" alt="tops india">
+                        <div class="overlay">
+                            <div class="overlay-infos">
+                                <h5>Tops india</h5>
+                            </div>                              
+                        </div>
+                    </div>                  
+                </div>
+                <div class="col-sm-4">
+                    <div class="img-wrapper">
+                        <img src="assets/imgs/gpi.jpg" alt="gpi foursquare">
+                        <div class="overlay">
+                            <div class="overlay-infos">
+                                <h5>GPI</h5>
+                            </div>  
+                        </div>
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="assets/imgs/toki.jpg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, Creative studio Landing page">
+                        <div class="overlay">
+                            <div class="overlay-infos">
+                                <h5>Project Title</h5>
+                                <a href="javascript:void(0)"><i class="ti-zoom-in"></i></a>
+                                <a href="javascript:void(0)"><i class="ti-link"></i></a>
+                            </div>                              
+                        </div>
+                    </div>                  
+                </div>
+                <div class="col-sm-4">
+                    <div class="img-wrapper">
+                        <img src="assets/imgs/skoda.jpg" alt="skoda">
+                        <div class="overlay">
+                            <div class="overlay-infos">
+                                <h5>skoda Motors</h5>
+                            </div>  
+                        </div>
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="assets/imgs/toki.jpg" alt="tkoi">
+                        <div class="overlay">
+                            <div class="overlay-infos">
+                                <h5>Venky's</h5>
+                            </div>                              
+                        </div>
+                    </div>                  
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of portfolio section -->
+
+    <!-- Team Section -->
+    <section id="team">
+        <div class="container">
+            <h6 class="section-subtitle text-center">Meet With</h6>
+            <h6 class="section-title mb-5 text-center">Our Angels</h6>
+            <div class="row">
+                <div class="col-sm-6 col-md-4">
+                    <div class="card text-center mb-4">
+                        <img class="card-img-top inset" src="assets/imgs/anil.jpg">
+                        <div class="card-body">
+                            <h6 class="small text-primary font-weight-bold">FOUNDER</h6>
+                            <h5 class="card-title">Anil Palai</h5>
+                            <p>Is Founder of Sathi Events and Brand Care Comunications Marketting companies, Excellent customer service with 1500+ 
+                                <br>5-star reviews.</p>
+                            <div class="socials">
+                                <a href="javascript:void(0)"><i class="ti-facebook"></i> </a>
+                                <a href="javascript:void(0)"><i class="ti-github"></i></a>
+                                <a href="javascript:void(0)"><i class="ti-dropbox"></i></a>
+                                <a href="javascript:void(0)"><i class="ti-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="card text-center mb-4">
+                        <img class="card-img-top inset" src="assets/imgs/rakesh.jpg">
+                        <div class="card-body">
+                            <h6 class="small text-primary font-weight-bold">SENIOR MARKETING EXECUTIVE</h6>
+                            <h5 class="card-title">Rakesh Navale</h5>
+                            <p>Well Qualified Computer Science Graduate and Event Manager works on 250+ <br> Projects with National & Multi-National companies</p>
+                            <div class="socials">
+                                <a href="javascript:void(0)"><i class="ti-facebook"></i> </a>
+                                <a href="javascript:void(0)"><i class="ti-github"></i></a>
+                                <a href="javascript:void(0)"><i class="ti-dropbox"></i></a>
+                                <a href="javascript:void(0)"><i class="ti-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="card text-center mb-4">
+                        <img class="card-img-top inset" src="assets/imgs/lipika.jpg">
+                        <div class="card-body">
+                            <h6 class="small text-primary font-weight-bold">MANAGER</h6>
+                            <h5 class="card-title">Lipika Barick</h5>
+                            <p>Well Qualified Bachelor in accounting and finance (BAF) also handles Client servicing executive <br> and accounts</p>
+                            <div class="socials">
+                                <a href="javascript:void(0)"><i class="ti-facebook"></i> </a>
+                                <a href="javascript:void(0)"><i class="ti-github"></i></a>
+                                <a href="javascript:void(0)"><i class="ti-dropbox"></i></a>
+                                <a href="javascript:void(0)"><i class="ti-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- End of Team Sectoin -->
+
+    <!-- Fatcs Section -->
+    <section class="has-bg-img bg-img-2">
+        <div class="container text-center">
+            <h6 class="section-subtitle">We Are Awesome</h6>
+            <h6 class="section-title mb-6">Some Fun Fucts</h6>
+                <div class="widget-2">
+                    <div class="widget-item">
+                        <i class="ti-cup"></i>
+                        <h6 class="title">100+</h6>
+                        <div class="subtitle">Awards Won</div>
+                    </div>
+                    <div class="widget-item">
+                        <i class="ti-face-smile"></i>
+                        <h6 class="title">300+</h6>
+                        <div class="subtitle">Happy Clients</div>
+                    </div>
+                    <div class="widget-item">
+                        <i class="ti-blackboard"></i>
+                        <h6 class="title">1500+</h6>
+                        <div class="subtitle">Project Completed</div>
+                    </div>
+                    <div class="widget-item">
+                        <i class="ti-comments-smiley"></i>
+                        <h6 class="title">15K+</h6>
+                        <div class="subtitle">Comments</div>
+                    </div>
+                </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section id="testimonial">
+        <div class="container">
+            <h6 class="section-subtitle text-center">Testimonial</h6>
+            <h6 class="section-title text-center mb-6">What Our Clients Says</h6>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="testimonial-wrapper">
+                        <div class="img-holder">
+                            <img src="assets/imgs/client1.jpeg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, Creative studio Landing page">                     
+                        </div>
+                        <div class="body">
+                            <p class="subtitle">Awsome work done by the company fast working and Excellent customer support.</p>
+                            <h6 class="title">Gaurav Sharma</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="testimonial-wrapper">
+                        <div class="img-holder">
+                            <img src="assets/imgs/avatar-6.jpg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, Creative studio Landing page">                     
+                        </div>
+                        <div class="body">
+                            <p class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque doloribus autem aperiam earum nostrum omnis blanditiis corporis perspiciatis adipisci nihil.</p>
+                            <h6 class="title">John Doe</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of Testimonial Section -->
+
+    <!-- Video Section -->
+    <section class="has-bg-img py-lg">
+        <div class="container text-center">
+
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-outline-primary play-control" data-toggle="modal" data-target="#exampleModalCenter">
+              <i class="ti-control-play" ></i>
+            </button>
+            <h6 class="section-title mt-4">See Our Intro Video</h6>
+
+        </div>
+    </section>
+    <!-- End of Video Section -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <iframe width="100%" height="475" src="https://www.youtube.com/embed/TP4THzsAa3M" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    <!-- end of modal -->
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="contact-card">
+                <div class="infos">
+                    <h6 class="section-subtitle">Get Here</h6>
+                    <h6 class="section-title mb-4">Contact Us</h6>
+
+                    <div class="item">
+                        <i class="ti-location-pin"></i>
+                        <div class="">
+                            <h5>Location</h5>
+                            <p> Ganesh Galli Mankhurd Mumbai 400 043</p>
+                        </div>                          
+                    </div>
+                    <div class="item">
+                        <i class="ti-mobile"></i>
+                        <div>
+                            <h5>Phone Number</h5>
+                            <p>8097130040</p>
+                        </div>                          
+                    </div>
+                    <div class="item">
+                        <i class="ti-email"></i>
+                        <div class="mb-0">
+                            <h5>Email Address</h5>
+                            <p>rakeshnavale2003@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <i class="ti-world"></i>
+                        <div class="mb-0">
+                            <h5>example.com</h5>
+                            <p>bccindia.in</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="form">
+                    <h6 class="section-subtitle">Available 24/7</h6>
+                    <h6 class="section-title mb-4">Get In Touch</h6>
+                    <form action="index.php" method="post">
+                        <div class="form-group">
+                            <input type="name" class="form-control form-control-lg" id="name" placeholder="Name" required name="name">
+                        </div>
+                        <div class="form-group">
+                            <input type="pno" class="form-control form-control-lg" id="pno" placeholder="Phone No" required name="pno">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control form-control-lg" id="email" name="email"  aria-describedby="emailHelp" placeholder="Enter email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea  id="" cols="30" rows="7" class="form-control form-control-lg" placeholder="Message" name="message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block btn-lg mt-3" name="Submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+
+    <section class="has-bg-img py-0">
+        <div class="container">
+            <div class="footer">
+                <div class="footer-lists">
+                    <ul class="list">
+                        <li class="list-head">
+                            <h6 class="font-weight-bold">ABOUT US</h6>
+                        </li>
+                        <li class="list-body">
+                            <a href="#" class="logo">
+                                <img src="assets/imgs/logo.png" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, Creative studio Landing page">
+                                <h6>Creative Studio</h6>
+                            </a>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae nobis fugit maxime deleniti minus optio accusamus, quam maiores explicabo sunt.</p> 
+                            <p class="mt-3">
+                                Copyright <script>document.write(new Date().getFullYear())</script> &copy; <a class="d-inline text-primary" href="http://www.devcrud.com">DevCRUD</a>
+                            </p>                   
+                        </li>
+                    </ul>
+                    <ul class="list">
+                        <li class="list-head">
+                            <h6 class="font-weight-bold">USEFUL LINKS</h6>
+                        </li>
+                        <li class="list-body">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="#about">About</a>
+                                    <a href="#service">Service</a>
+                                    <a href="#portfolio">Portfolio</a>
+                                    <a href="#testmonail">Testimonial</a>
+                                </div>
+                                <div class="col">
+                                    <a href="#team">Team</a>
+                                    <a href="#blog">Blog</a>
+                                    <a href="#">Faq</a>
+                                    <a href="#">Privacy Policy</a>                  
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="list">
+                        <li class="list-head">
+                            <h6 class="font-weight-bold">CONTACT INFO</h6>
+                        </li>
+                        <li class="list-body">
+                            <p>Contact us and we'll get back to you within 24 hours.</p>
+                            <p><i class="ti-location-pin"></i> 12345 Fake ST NoWhere AB Country</p>
+                            <p><i class="ti-email"></i>  info@website.com</p>
+                            <div class="social-links">
+                                <a href="javascript:void(0)" class="link"><i class="ti-facebook"></i></a>
+                                <a href="javascript:void(0)" class="link"><i class="ti-twitter-alt"></i></a>
+                                <a href="javascript:void(0)" class="link"><i class="ti-google"></i></a>
+                                <a href="javascript:void(0)" class="link"><i class="ti-pinterest-alt"></i></a>
+                                <a href="javascript:void(0)" class="link"><i class="ti-instagram"></i></a>
+                                <a href="javascript:void(0)" class="link"><i class="ti-rss"></i></a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>    
+        </div>
+    </section>
+    <!--Footer-->
+    <footer class="bg-dark p-2 text-center">
+        <div class="container">
+          <p class="text-white">All Right Reserved @rakeshnavale2003@gmail.com</p>
+        </div>
+      </footer>
+
+    <!-- core  -->
+
+    <script>
+        var typingEffect = new Typed(".multiText", {
+            strings : [" Organised"," Planned"," Managed"],
+            loop : true,
+            typeSpeed : 100,
+            backSpeed : 80,
+            backDelay : 1500
+        })
+    </script>
+    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- bootstrap affix -->
+    <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- Creative Studio js -->
+    <script src="assets/js/creative-studio.js"></script>
+
+</body>
+</html>
